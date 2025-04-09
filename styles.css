@@ -10,24 +10,37 @@ body {
 
 .calculator {
   width: 300px;
-  border: 2px solid #000;
+  border: 6px solid #000;
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .display {
   border-bottom: 2px solid #000;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .display-line {
   padding: 10px;
-  height: 40px;
-  border-bottom: 1px solid #000;
+  height: 50%;
   box-sizing: border-box;
   text-align: right;
   font-size: 1.2em;
   overflow-x: auto;
+  flex: 1;
 }
+
+#input1 {
+  background: lightgray;
+}
+
+#input2 {
+  background: lightblue;
+}
+
 
 .buttons {
   display: grid;
@@ -50,6 +63,6 @@ button:hover {
   grid-column: span 2;
 }
 
-.empty {
-  border: none;
+.backspace {
+  grid-column: span 2;
 }
