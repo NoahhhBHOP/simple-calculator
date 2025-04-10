@@ -1,6 +1,8 @@
 let fin = '';
-let num1 = '';
+let num1 = ''; // num refers to string number
+let realNum1 = ''; //realnum refers to number after conversion from string
 let num2 = '';
+let realNum2 = '';
 let operator = '';
 
 let add = function(num1,num2) {
@@ -27,13 +29,44 @@ let operate = function(num1,operator,num2) {
     return operator(num1,num2);
 }
 
-let backspaceString = function (num1) {
+let backspaceString = function(num1) {
     if (num1.length > 0) {
       return num1.slice(0, -1);
     } else {
       return num1;
     }
   }
+
+let strToNum = function (num1) {
+    realNum1 = parseInt(num1);
+    return realnum1;
+}
+
+let pushDisplay = function(num1, operator) {
+ 
+    if (operator = add) {
+        strToNum(num1);
+        num2 = realNum1;
+        input2.textContent = num2 + '+';
+    }
+    else if (operator = subtract) {
+        strToNum(num1);
+        num2 = realNum1;
+        input2.textContent = num2 + '-';
+    }
+    else if (operator = multiply) {
+        strToNum(num1);
+        num2 = realNum1;
+        input2.textContent = num2 + '×';
+    }
+    else if (operator = divide) {
+        strToNum(num1);
+        num2 = realNum1;
+        input2.textContent = num2 + '÷';
+    }
+    
+
+}
 
 let oneButton = document.getElementById('1');
 oneButton.addEventListener('click', () => { 
