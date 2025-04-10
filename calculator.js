@@ -38,7 +38,7 @@ let backspaceString = function(num1) {
   }
 
 let strToNum = function (num1) {
-    realNum1 = parseInt(num1);
+    realNum1 = Number(num1);
     return realNum1;
 };
 
@@ -208,6 +208,7 @@ equalsButton.addEventListener('click', () => {
     }
     num1 = fin;
     num2 = '';
+    operator = '';
  });
 
 let input1 = document.getElementById('input1');
