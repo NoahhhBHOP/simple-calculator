@@ -189,6 +189,18 @@ decimalButton.addEventListener('click', () => {
     input1.textContent = num1;
 });
 
+let negativeButton = document.getElementById('negative');
+negativeButton.addEventListener('click', () => {
+    if (num1.charAt(0) !== '-') {
+        num1 = '-' + num1;
+        input1.textContent = num1;
+    }
+    else {
+        num1 = num1.slice(1);
+        input1.textContent = num1;
+    }
+})
+
 let equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click', () => {
     num1 = strToNum(num1);
