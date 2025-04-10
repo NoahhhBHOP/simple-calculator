@@ -42,6 +42,11 @@ let strToNum = function (num1) {
     return realNum1;
 };
 
+let numToStr = function (num1) {
+    realNum1 = num1.toString();
+    return realNum1;
+}
+
 let pushDisplay = function(num1, operator) {
  
     if (operator === add) {
@@ -128,6 +133,7 @@ zeroButton.addEventListener('click', () => {
 
 let backspaceButton = document.getElementById('backspace');
 backspaceButton.addEventListener('click', () => {
+    num1 = numToStr(num1);
     num1 = backspaceString(num1);
     input1.textContent = num1;
 });
@@ -135,7 +141,7 @@ backspaceButton.addEventListener('click', () => {
 let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', () => {
     num1 = '';
-    realnum1 = '';
+    realNum1 = '';
     num2 = '';
     operator = '';
     input1.textContent = '';
