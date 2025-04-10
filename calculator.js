@@ -39,34 +39,32 @@ let backspaceString = function(num1) {
 
 let strToNum = function (num1) {
     realNum1 = parseInt(num1);
-    return realnum1;
-}
+    return realNum1;
+};
 
 let pushDisplay = function(num1, operator) {
  
-    if (operator = add) {
+    if (operator === add) {
         strToNum(num1);
         num2 = realNum1;
-        input2.textContent = num2 + '+';
+        input2.textContent = num2 + ' +';
     }
-    else if (operator = subtract) {
+    else if (operator === subtract) {
         strToNum(num1);
         num2 = realNum1;
-        input2.textContent = num2 + '-';
+        input2.textContent = num2 + ' -';
     }
-    else if (operator = multiply) {
+    else if (operator === multiply) {
         strToNum(num1);
         num2 = realNum1;
-        input2.textContent = num2 + '×';
+        input2.textContent = num2 + ' ×';
     }
-    else if (operator = divide) {
+    else if (operator === divide) {
         strToNum(num1);
         num2 = realNum1;
-        input2.textContent = num2 + '÷';
+        input2.textContent = num2 + ' ÷';
     }
-    
-
-}
+};
 
 let oneButton = document.getElementById('1');
 oneButton.addEventListener('click', () => { 
@@ -141,12 +139,32 @@ clearButton.addEventListener('click', () => {
 });
 
 let divideButton = document.getElementById('divide');
+divideButton.addEventListener('click', () => {
+    pushDisplay(num1, divide);
+    num1 = '';
+    input1.textContent = num1;
+});
 
 let multiplyButton = document.getElementById('multiply');
+multiplyButton.addEventListener('click', () => {
+    pushDisplay(num1, multiply);
+    num1 = '';
+    input1.textContent = num1;
+});
 
 let subtractButton = document.getElementById('subtract');
+subtractButton.addEventListener('click', () => {
+    pushDisplay(num1, subtract);
+    num1 = '';
+    input1.textContent = num1;
+});
 
 let addButton = document.getElementById('add');
+addButton.addEventListener('click', () => {
+    pushDisplay(num1, add);
+    num1 = '';
+    input1.textContent = num1;
+});
 
 let decimalButton = document.getElementById('decimal');
 decimalButton.addEventListener('click', () => {
