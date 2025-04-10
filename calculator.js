@@ -233,6 +233,7 @@ equalsButton.addEventListener('click', () => {
         operator = '';
     }
     else {
+        num1 = numToStr(fin);
         input2.textContent = num1;
         fin = num1;
     }
