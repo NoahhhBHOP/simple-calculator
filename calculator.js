@@ -239,6 +239,60 @@ equalsButton.addEventListener('click', () => {
     }
  });
 
+ document.addEventListener('keydown', (e) => {
+    if (e.key === '0') {
+        zeroButton.click();
+    }
+    else if (e.key === '1') {
+        oneButton.click();
+    }
+    else if (e.key === '2') {
+        twoButton.click();
+    }
+    else if (e.key === '3') {
+        threeButton.click();
+    }
+    else if (e.key === '4') {
+        fourButton.click();
+    }
+    else if (e.key === '5') {
+        fiveButton.click();
+    }
+    else if (e.key === '6') {
+        sixButton.click();
+    }
+    else if (e.key === '7') {
+        sevenButton.click();
+    }
+    else if (e.key === '8') {
+        eightButton.click();
+    }
+    else if (e.key === '9') {
+        nineButton.click();
+    }
+    else if (e.key === 'Backspace') {
+        backspaceButton.click();
+    }
+    else if (e.key === '+') {
+        addButton.click();
+    }
+    else if (e.key === '-') {
+        subtractButton.click();
+    }
+    else if (e.key === '*') {
+        multiplyButton.click();
+    }
+    else if (e.key === '/') {
+        divideButton.click();
+    }
+    else if (e.key === 'Enter') {
+        equalsButton.click();
+    }
+    else if (e.key === '.') {
+        decimalButton.click();
+    }
+});
+
 let input1 = document.getElementById('input1');
 
 let input2 = document.getElementById('input2');
