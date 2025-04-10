@@ -1,6 +1,7 @@
 let fin = '';
 let num1 = '';
 let num2 = '';
+let operator = '';
 
 let add = function(num1,num2) {
     fin = num1 + num2;
@@ -115,6 +116,13 @@ let subtractButton = document.getElementById('subtract');
 let addButton = document.getElementById('add');
 
 let decimalButton = document.getElementById('decimal');
+decimalButton.addEventListener('click', () => {
+    if (num1.indexOf('.') > -1) {
+        num1 = num1;
+    }
+    else num1 = num1 + '.';
+    input1.textContent = num1;
+});
 
 let equalsButton = document.getElementById('equals');
 
