@@ -142,6 +142,7 @@ let divideButton = document.getElementById('divide');
 divideButton.addEventListener('click', () => {
     pushDisplay(num1, divide);
     num1 = '';
+    operator = divide;
     input1.textContent = num1;
 });
 
@@ -149,6 +150,7 @@ let multiplyButton = document.getElementById('multiply');
 multiplyButton.addEventListener('click', () => {
     pushDisplay(num1, multiply);
     num1 = '';
+    operator = multiply;
     input1.textContent = num1;
 });
 
@@ -156,6 +158,7 @@ let subtractButton = document.getElementById('subtract');
 subtractButton.addEventListener('click', () => {
     pushDisplay(num1, subtract);
     num1 = '';
+    operator = subtract;
     input1.textContent = num1;
 });
 
@@ -163,6 +166,7 @@ let addButton = document.getElementById('add');
 addButton.addEventListener('click', () => {
     pushDisplay(num1, add);
     num1 = '';
+    operator = add;
     input1.textContent = num1;
 });
 
