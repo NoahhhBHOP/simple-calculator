@@ -135,7 +135,11 @@ backspaceButton.addEventListener('click', () => {
 let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', () => {
     num1 = '';
-    input1.textContent = num1;
+    realnum1 = '';
+    num2 = '';
+    operator = '';
+    input1.textContent = '';
+    input2.textContent = '';
 });
 
 let divideButton = document.getElementById('divide');
