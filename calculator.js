@@ -6,22 +6,22 @@ let realNum2 = '';
 let operator = '';
 
 let add = function(num1,num2) {
-    fin = num1 + num2;
+    fin = num2 + num1;
     return fin;
 }
 
 let subtract = function(num1,num2) {
-    fin = num1 - num2;
+    fin = num2 - num1;
     return fin;
 }
 
 let multiply = function(num1,num2) {
-    fin = num1 * num2;
+    fin = num2 * num1;
     return fin;
 }
 
 let divide = function(num1,num2) {
-    fin = num1 / num2;
+    fin = num2 / num1;
     return fin;
 }
 
@@ -184,6 +184,25 @@ decimalButton.addEventListener('click', () => {
 });
 
 let equalsButton = document.getElementById('equals');
+equalsButton.addEventListener('click', () => {
+    num1 = strToNum(num1);
+    fin = operate(num1,operator,num2);
+    input1.textContent = fin;
+    if (operator === add) {
+        input2.textContent = num2 + ' + ' + num1;
+    }
+    else if (operator === subtract) {
+        input2.textContent = num2 + ' - ' + num1;
+    }
+    else if (operator === multiply) {
+        input2.textContent = num2 + ' × ' + num1;
+    }
+    else if (operator === divide) {
+        input2.textContent = num2 + ' ÷ ' + num1;
+    }
+    num1 = fin;
+    num2 = '';
+ });
 
 let input1 = document.getElementById('input1');
 
