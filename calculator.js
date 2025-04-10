@@ -204,23 +204,38 @@ negativeButton.addEventListener('click', () => {
 let equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click', () => {
     num1 = strToNum(num1);
-    fin = operate(num1,operator,num2);
-    input1.textContent = fin;
     if (operator === add) {
+        fin = operate(num1,operator,num2);
+        input1.textContent = fin;
         input2.textContent = num2 + ' + ' + num1;
+        num1 = numToStr(fin);
+        operator = '';
     }
     else if (operator === subtract) {
+        fin = operate(num1,operator,num2);
+        input1.textContent = fin;
         input2.textContent = num2 + ' - ' + num1;
+        num1 = numToStr(fin);
+        operator = '';
     }
     else if (operator === multiply) {
+        fin = operate(num1,operator,num2);
+        input1.textContent = fin;
         input2.textContent = num2 + ' × ' + num1;
+        num1 = numToStr(fin);
+        operator = '';
     }
     else if (operator === divide) {
+        fin = operate(num1,operator,num2);
+        input1.textContent = fin;
         input2.textContent = num2 + ' ÷ ' + num1;
+        num1 = numToStr(fin);
+        operator = '';
     }
-    num1 = fin;
-    num2 = '';
-    operator = '';
+    else {
+        input2.textContent = num1;
+        fin = num1;
+    }
  });
 
 let input1 = document.getElementById('input1');
