@@ -205,37 +205,42 @@ let equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click', () => {
     num1 = strToNum(num1);
     if (operator === add) {
-        fin = operate(num1,operator,num2);
-        input1.textContent = fin;
         input2.textContent = num2 + ' + ' + num1;
-        num1 = numToStr(fin);
+        num1 = operate(num1,operator,num2);
+        input1.textContent = num1;
+        num1 = numToStr(num1);
+        num2 = '';
         operator = '';
     }
     else if (operator === subtract) {
-        fin = operate(num1,operator,num2);
-        input1.textContent = fin;
         input2.textContent = num2 + ' - ' + num1;
-        num1 = numToStr(fin);
+        num1 = operate(num1,operator,num2);
+        input1.textContent = num1;
+        num1 = numToStr(num1);
+        num2 = '';
         operator = '';
     }
     else if (operator === multiply) {
-        fin = operate(num1,operator,num2);
-        input1.textContent = fin;
         input2.textContent = num2 + ' × ' + num1;
-        num1 = numToStr(fin);
+        num1 = operate(num1,operator,num2);
+        input1.textContent = num1;
+        num1 = numToStr(num1);
+        num2 = '';
         operator = '';
     }
     else if (operator === divide) {
-        fin = operate(num1,operator,num2);
-        input1.textContent = fin;
         input2.textContent = num2 + ' ÷ ' + num1;
-        num1 = numToStr(fin);
+        num1 = operate(num1,operator,num2);
+        input1.textContent = num1;
+        num1 = numToStr(num1);
+        num2 = '';
         operator = '';
     }
     else {
-        num1 = numToStr(fin);
+        num1 = numToStr(num1);
         input2.textContent = num1;
-        fin = num1;
+        num2 = '';
+        operator = '';
     }
  });
 
@@ -292,6 +297,10 @@ equalsButton.addEventListener('click', () => {
         decimalButton.click();
     }
 });
+
+if (num1 === "Infinity") {
+    input1.textContent = "Undefined"
+}
 
 let input1 = document.getElementById('input1');
 
